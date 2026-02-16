@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>♠️ Blackjack ♥️</h1>
+        
+        <div class="info">
+            <p>Chips: $<span id="chips">1000</span> | Bet: $<span id="currentBet">0</span></p>
+        </div>
+
+        <div class="card-area">
+            <h2>Dealer's Hand (<span id="dealerScore">0</span>)</h2>
+            <div id="dealerCards" class="cards"></div>
+        </div>
+
+        <div class="card-area">
+            <h2>Your Hand (<span id="playerScore">0</span>)</h2>
+            <div id="playerCards" class="cards"></div>
+        </div>
+
+        <div class="message" id="message">Place your bet to start!</div>
+
+        <div class="controls">
+    <div id="bettingControls">
+        <button onclick="placeBet(10)">Bet $10</button>
+        <button onclick="placeBet(50)">Bet $50</button>
+        <button onclick="placeBet(100)">Bet $100</button>
+        <button onclick="placeBet(200)">Bet $200</button>
+        <button onclick="startGame()">Deal</button>
+    </div>
+    
+    <div id="gameControls" style="display: none;">
+        <button onclick="hit()">Hit</button>
+        <button onclick="stand()">Stand</button>
+    </div>
+    
+    <div style="margin-top: 20px;">
+        <button onclick="resetChips()" style="background-color: #ff6b6b;">Reset Chips</button>
+    </div>
+</div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
